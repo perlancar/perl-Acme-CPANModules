@@ -141,3 +141,5 @@ documentation or C<lcpan related-mods --help> for more details.
 C<Acme::CPANModules::*> modules
 
 L<cpanmodules> from L<App::cpanmodules>
+
+L<Bencher>
