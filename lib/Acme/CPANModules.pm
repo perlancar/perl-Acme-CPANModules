@@ -70,6 +70,11 @@ structure is this:
          {...},
          ...
      ],
+
+     ## specify Bencher scenario properties; "bench_" prefix will be removed
+     ## when creating scenario record. see Bencher for more details.
+     # bench_datasets => [ ... ],
+     # bench_extra_modules => [ ... ],
  }
 
 Each entry is another DefHash:
