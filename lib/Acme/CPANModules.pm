@@ -58,6 +58,8 @@ structure is this:
  This is just a list of my favorite modules.
  _
 
+     ## define features to be used by entries. this can be used to generate a
+     ## feature comparison matrix among the entries.
      # entry_features => { # optional
      #     feature1 => 'Summary of feature1',
      #     feature2 => 'Summary of feature2',
@@ -87,6 +89,9 @@ Each entry is another DefHash:
 
      # related_modules => ['Data::Dump::Color', 'Data::Dumper'], # if you want to specify related modules that are not listed on the other entries of the same list
 
+     ## specify which features this entry supports/doesn't support. this can be
+     ## used to generate feature comparison matrix. see
+     ## Acme::CPANModulesUtil::FeatureMatrix.
      # features => {
      #     feature1 => 1,
      #     feature2 => 0,
@@ -94,8 +99,8 @@ Each entry is another DefHash:
      #     ...
      # },
 
-     # specify Bencher scenario participant's properties; "bench_" prefix will
-     # be removed when creating participant record.
+     ## specify Bencher scenario participant's properties; "bench_" prefix will
+     ## be removed when creating participant record.
      # bench_code => sub { ... }, # or
      # bench_code_template => 'Data::Dump::dump(<data>)',
      # ...
