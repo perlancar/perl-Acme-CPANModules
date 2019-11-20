@@ -57,10 +57,18 @@ structure is this:
 
  This is just a list of my favorite modules.
  _
+
+     # entry_features => { # optional
+     #     feature1 => 'Summary of feature1',
+     #     feature2 => 'Summary of feature2',
+     #     ...
+     # },
+
      entries => [
          {...},
          ...
      ],
+ }
 
 Each entry is another DefHash:
 
@@ -72,9 +80,26 @@ Each entry is another DefHash:
  Data::Dump is my favorite dumping module because it outputs Perl code that
  is pretty and readable.
  _
+
      # rating => 10, # optional, on a 1-10 scale
+
      # alternate_modules => [...], # if you are reviewing an undesirable module and want to suggest better alternative(s)
+
      # related_modules => ['Data::Dump::Color', 'Data::Dumper'], # if you want to specify related modules that are not listed on the other entries of the same list
+
+     # features => {
+     #     feature1 => 1,
+     #     feature2 => 0,
+     #     feature4 => {value=>0, summary=>'Irrelevant because foo bar'},
+     #     ...
+     # },
+
+     # specify Bencher scenario participant's properties; "bench_" prefix will
+     # be removed when creating participant record.
+     # bench_code => sub { ... }, # or
+     # bench_code_template => 'Data::Dump::dump(<data>)',
+     # ...
+
  }
 
 That's it. After you have completed your list, publish your Acme::CPANModules
