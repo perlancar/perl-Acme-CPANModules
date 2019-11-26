@@ -1,3 +1,10 @@
+0.1.4   2019-11-26  Released-By: PERLANCAR; Urgency: low
+
+	- No spec changes.
+
+	- Mention attribute x.app.cpanmodules.show_entries in example.
+
+
 0.1.3   2019-11-20  Released-By: PERLANCAR; Urgency: low
 
 	- No spec changes.
