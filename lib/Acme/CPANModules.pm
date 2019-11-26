@@ -75,6 +75,12 @@ structure is this:
      ## when creating scenario record. see Bencher for more details.
      # bench_datasets => [ ... ],
      # bench_extra_modules => [ ... ],
+
+     ## optional. Instruct cpanmodules script to not show the entries when
+     ## viewing the list. This is sometimes convenient when the description
+     ## already mentions all the entries.
+     #'x.app.cpanmodules.show_entries' => 0,
+
  }
 
 Each entry is another DefHash:
