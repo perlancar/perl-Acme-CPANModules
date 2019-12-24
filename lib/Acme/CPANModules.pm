@@ -8,7 +8,7 @@ package Acme::CPANModules;
 
 =head1 SPECIFICATION VERSION
 
-0.1.0
+0.1
 
 
 =head1 DESCRIPTION
