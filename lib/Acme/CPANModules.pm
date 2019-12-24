@@ -131,16 +131,20 @@ your module's documentation can immediately read your list.
 
 =head1 USING ACME::CPANMODULES MODULES
 
-As said earlier, a website/online service that collects and indexes all
-Acme::CPANModules modules on CPAN is coming in the future.
+You can install the L<cpanmodules> CLI script (from the L<App::cpanmodules>
+distribution). It can list installed Acme::CPANModules modules and view list
+entries. To install all modules listed on an Acme::CPANModules module, you can
+do something like:
 
-In the meantime, you can install the L<cpanmodules> CLI script (from the
-L<App::cpanmodules> distribution). It can list installed Acme::CPANModules
-modules and view list entries.
+ % cpanmodules ls-entries Org | cpanm -n
 
 Putting similar/related modules together in an Acme::CPANModules can also help
 the L<lcpan> script find related modules (C<lcpan related-mods>). See the lcpan
 documentation or C<lcpan related-mods --help> for more details.
+
+As mentioned earlier, a website/online service that collects and indexes all
+Acme::CPANModules modules on CPAN is coming in the future. Meanwhile, there's
+MetaCPAN.
 
 
 =head1 SEE ALSO
