@@ -24,9 +24,6 @@ of C<++>'s a distribution has) help to some extent. There are also various blog
 posts by Perl programmers which review modules, e.g. L<CPAN Module Reviews by
 Neil Bowers|http://neilb.org/reviews/>.
 
-For categorizing CPAN authors, there are also the L<Acme::CPANAuthors> project,
-complete with L<its own website|http://acme.cpanauthors.org/>.
-
 Acme::CPANModules is another mechanism to help, to let someone categorize
 modules in whatever way she likes.
 
@@ -154,3 +151,6 @@ C<Acme::CPANModules::*> modules
 L<cpanmodules> from L<App::cpanmodules>
 
 L<Bencher>
+
+For categorizing CPAN authors, there are also the L<Acme::CPANAuthors> project,
+complete with L<its own website|http://acme.cpanauthors.org/>.
