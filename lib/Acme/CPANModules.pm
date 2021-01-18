@@ -159,7 +159,7 @@ _
      ],
  };
 
-For more example, see existing C<Acme::CPANModules::*> modules on CPAN.
+For more examples, see existing C<Acme::CPANModules::*> modules on CPAN.
 
 If you are using L<Dist::Zilla> to release your distribution, this
 L<Pod::Weaver> plugin might be useful for you:
