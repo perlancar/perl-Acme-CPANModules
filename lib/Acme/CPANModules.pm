@@ -33,10 +33,11 @@ get to it :-), or perhaps when I get some help).
 
 =head1 CREATING AN ACME::CPANMODULES MODULE
 
-The first step is to decide on a name of the module. It must be under the
-C<Acme::CPANModules::> namespace. I recommend that you prefix your module with
-your CPAN ID, e.g. L<Acme::CPANModules::PERLANCAR::Unbless> or
-L<Acme::CPANModules::PERLANCAR::Task::PickingRandomLinesFromFile>.
+The first step is to decide on the name of your module. It must be under the
+C<Acme::CPANModules::> namespace. For example, if you create a list of your
+favorite modules, you can use C<Acme::CPANModules::YOURCPANID::Favorite>. Or if
+you are creating a list of modules that predict the future, you can choose
+C<Acme::CPANModules::PredictingTheFuture>.
 
 Inside the module, you must declare a hash named C<$LIST>:
 
@@ -118,6 +119,47 @@ Each entry is another DefHash:
 
 That's it. After you have completed your list, publish your Acme::CPANModules
 module to CPAN.
+
+Here's a sample of one of the simplest C<$LIST> you can have:
+
+ $LIST = {
+     summary => 'Modules that predict the future',
+     entries => [
+         {module=>'Zorb'},
+         {module=>'Madame::Zita'},
+     ],
+ };
+
+Here's another, more expanded sample:
+
+ $LIST = {
+     summary => 'Modules that predict the future',
+     description => <<'_',
+
+This list catalogs modules that predict the future. Yes, the future is
+unpredictable. But we can try anyway, right?
+
+_
+     entries => [
+         {
+             module => 'Zorb',
+             summary => 'Contact the API for the strange crystal Zorb',
+             description => <<'_',
+
+This module is an API client to Zorb, a strange crystal that supposedly fell
+from the sky in 2017 near Ozark, that can change color depending on what you
+feed to it. The API connects to Zorb API server managed by Crooks, Inc.
+
+_
+         },
+         {
+             module => 'Madame::Zita',
+             summary => 'Ask Madame Zita the fortune teller',
+         },
+     ],
+ };
+
+For more example, see existing C<Acme::CPANModules::*> modules on CPAN.
 
 If you are using L<Dist::Zilla> to release your distribution, this
 L<Pod::Weaver> plugin might be useful for you:
