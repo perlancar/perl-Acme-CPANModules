@@ -1,6 +1,8 @@
 package Acme::CPANModules;
 
+# AUTHORITY
 # DATE
+# DIST
 # VERSION
 
 1;
@@ -114,6 +116,14 @@ Each entry is another DefHash:
      # bench_code => sub { ... }, # or
      # bench_code_template => 'Data::Dump::dump(<data>)',
      # ...
+
+     # list what functions are in the module. currently this is mainly used for
+     # specifying benchmark instructions for the functions.
+     functions => {
+         func1 => {
+             bench_code_template => 'Data::Dump::dump([])',
+         },
+     },
 
  }
 
