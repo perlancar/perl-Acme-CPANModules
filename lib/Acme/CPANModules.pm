@@ -62,8 +62,10 @@ structure is this:
      ## define features to be used by entries. this can be used to generate a
      ## feature comparison matrix among the entries.
      # entry_features => { # optional
-     #     feature1 => 'Summary of feature1',
-     #     feature2 => 'Summary of feature2',
+     #     feature1 => {summary=>'Summary of feature1', schema=>'str*'}, # default schema is 'bool' if not specified
+     #     feature2 => {summary=>'Summary of feature2', ...},
+     #     feature3 => {...},
+     #     feature4 => {...},
      #     ...
      # },
 
@@ -105,9 +107,10 @@ Each entry is another DefHash:
      ## used to generate feature comparison matrix. see
      ## Acme::CPANModulesUtil::FeatureMatrix.
      # features => {
-     #     feature1 => 1,
-     #     feature2 => 0,
-     #     feature4 => {value=>0, summary=>'Irrelevant because foo bar'},
+     #     feature1 => 'foo',   # string, value is "foo"
+     #     feature2 => 0,       # bool, value is false ("no")
+     #                          # since feature3 is not specified for this module, the value is "N/A"
+     #     feature4 => {value=>0, summary=>'Irrelevant because foo bar'},  # bool, value is false. with additional note.
      #     ...
      # },
 
