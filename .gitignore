@@ -2,3 +2,4 @@ Acme-CPANModules-*
 .build
 *~
 nytprof*
+.DS_Store
