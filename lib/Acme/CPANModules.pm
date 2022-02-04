@@ -1,3 +1,5 @@
+# no code
+## no critic: TestingAndDebugging::RequireUseStrict
 package Acme::CPANModules;
 
 # AUTHORITY
@@ -39,7 +41,8 @@ The first step is to decide on the name of your module. It must be under the
 C<Acme::CPANModules::> namespace. For example, if you create a list of your
 favorite modules, you can use C<Acme::CPANModules::YOURCPANID::Favorite>. Or if
 you are creating a list of modules that predict the future, you can choose
-C<Acme::CPANModules::PredictingTheFuture>.
+C<Acme::CPANModules::PredictingTheFuture>. See recommendations for module name
+in L</module name> under L</RECOMMENDATIONS>.
 
 Inside the module, you must declare a hash named C<$LIST>:
 
@@ -52,7 +55,7 @@ structure is this:
 
  # an example module list
  {
-     summary => 'My favorite modules',
+     summary => 'List of my favorite modules',  # for recommendation of summary, see Recommendations section
      description => <<'_',
  (Some longer description, in Markdown format)
 
@@ -179,6 +182,46 @@ L<Pod::Weaver> plugin might be useful for you:
 L<Pod::Weaver::Plugin::Acme::CPANModules>. It will create an C<=head2 Included
 modules> section which is POD rendering of your module list so users reading
 your module's documentation can immediately read your list.
+
+
+=head1 RECOMMENDATIONS
+
+=head2 module name
+
+An Acme::CPANModules module is named under C<Acme::CPANModules::> namespace.
+
+A personal list should go under your CPAN ID's subnamespace, e.g.
+C<Acme::CPANModules::YOURCPANID::Favorite> or
+C<Acme::CPANModules::YOURCPANID::Avoided>.
+
+Avoid having C<Modules> in the name as it is superfluous, e.g.
+C<Acme::CPANModules::TextTable> instead of
+C<Acme::CPANModules::TextTableModules>.
+
+Verb is preferrably written in present participle form, e.g. for a list of
+modules that parse JSON: C<Acme::CPANModules::ParsingJSON> instead of
+C<Acme::CPANModules::ParseJSON>.
+
+Noun that refers to the modules (entries) is preferrably written in plural
+forms, e.g. C<Acme::CPANModules::JSONParsers> instead of
+C<Acme::CPANModules::JSONParser>.
+
+=head2 list summary
+
+The list summary normally becomes the Acme::CPANModules module's Abstract.
+
+It is recommended to start the summary with "List of modules which/that" or
+"List of my ... modules" to make it clearer that the Acme::CPANModules module
+only contains a list of other modules, instead of an actual implementation.
+
+Some preferred examples:
+
+Some non-preferred examples:
+
+
+=head2 entry rating
+
+Should only be used for personal lists.
 
 
 =head1 USING ACME::CPANMODULES MODULES
