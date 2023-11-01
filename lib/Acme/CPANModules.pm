@@ -259,6 +259,8 @@ For role related to C<Acme::CPANModules>.
 
 For distribution that contains several C<Acme::CPANModulesRole::> modules.
 
+=back
+
 
 =head1 USING ACME::CPANMODULES MODULES
 
