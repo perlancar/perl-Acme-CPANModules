@@ -235,7 +235,7 @@ C<Acme::CPANModules::*> module. See recommendations in L</"module name">.
 =head2 module bundle abstract
 
 An C<Acme::CPANModulesBundle::> module should have abstract that begins with
-"Lists of ...".
+"Bundle of ...".
 
 =head2 other modules
 
