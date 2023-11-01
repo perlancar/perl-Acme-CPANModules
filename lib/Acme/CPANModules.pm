@@ -224,6 +224,42 @@ Some non-preferred examples:
 Should only be used for personal lists.
 
 
+=head2 module bundle name
+
+A distribution that contains several C<Acme::CPANModules::*> modules should be
+named C<Acme-CPANModulesBundle-*>.
+
+In general, an C<Acme::CPANModulesBundle::> module should be named like an
+C<Acme::CPANModules::*> module. See recommendations in L</"module name">.
+
+=head2 module bundle abstract
+
+An C<Acme::CPANModulesBundle::> module should have abstract that begins with
+"Lists of ...".
+
+=head2 other modules
+
+Other suggested namespaces:
+
+=over
+
+=item * C<Acme::CPANModulesUtil::>,
+
+Utility modules that do not contain lists of modules themselves.
+
+=item * C<Acme::CPANModulesUtilBundle::>,
+
+For distribution that contains several C<Acme::CPANModulesUtil::*> modules.
+
+=item * C<Acme::CPANModulesRole::>
+
+For role related to C<Acme::CPANModules>.
+
+=item * C<Acme::CPANModulesRoleBundle::>
+
+For distribution that contains several C<Acme::CPANModulesRole::> modules.
+
+
 =head1 USING ACME::CPANMODULES MODULES
 
 You can install the L<cpanmodules> CLI script (from the L<App::cpanmodules>
