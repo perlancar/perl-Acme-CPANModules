@@ -8,7 +8,7 @@ package Acme::CPANModules;
 # VERSION
 
 1;
-# ABSTRACT: Categorizing CPAN modules
+# ABSTRACT: List of CPAN modules
 
 =head1 SPECIFICATION VERSION
 
